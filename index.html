@@ -17,7 +17,7 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__h1">ohmyfood</h1>
+      <h1 class="header__heading">ohmyfood</h1>
     </header>
     <form class="search-city" method="GET" action="#">
       <div class="search-city__city-name">
@@ -29,21 +29,102 @@
       <button type="submit" value="">Explorer nos restaurants</button>
     </form>
     <section class="manual">
-      <a class="manual__button" href="#"
+      <a class="manual__step" href="#"
         ><span class="manual__step__number">1</span
         ><i class="fas fa-mobile-alt"></i> Choisissez un restaurant</a
       >
-      <a class="manual__button" href="#"
+      <a class="manual__step" href="#"
         ><span class="manual__step__number">2</span
         ><i class="fas fa-list-ul"></i> Composez votre menu</a
       >
-      <a class="manual__button" href="#"
+      <a class="manual__step" href="#"
         ><span class="manual__step__number">3</span
         ><i class="fas fa-store"></i> Dégustez au restaurant</a
       >
     </section>
+    <section class="restaurants">
+      <h2 class="restaurants__heading"></h2>
+      <figure class="restaurants__restaurant">
+        <a
+          href="/menus/la-palette-du-goût.html"
+          class="restaurants__restaurant__link"
+        >
+          <img
+            class="restaurants__restaurant__img"
+            src="/public/img/restaurants/la-palette-du-goût.jpg"
+            alt="Photo d'un plat de La palette du goût"
+          />
+          <figcaption class="restaurants__restaurant__text">
+            <h3 class="restaurants__restaurant__heading">La palette du goût</h3>
+            <p>Ménilmontant</p>
+          </figcaption>
+        </a>
+        <button type="button" class="restaurants__restaurant_like">
+          <i class="far fa-heart"></i>
+        </button>
+        <p class="restaurants__restaurant__new">Nouveau</p>
+      </figure>
+      <figure class="restaurants__restaurant">
+        <a
+          href="/menus/la-note-enchantée.html"
+          class="restaurants__restaurant__link"
+        >
+          <img
+            class="restaurants__restaurant__img"
+            src="/public/img/restaurants/la-note-enchantée.jpg"
+            alt="Photo d'un plat de La note enchantée"
+          />
+          <figcaption class="restaurants__restaurant__text">
+            <h3 class="restaurants__restaurant__heading">La note enchantée</h3>
+            <p>Charonne</p>
+          </figcaption>
+        </a>
+        <button type="button" class="restaurants__restaurant__like">
+          <i class="far fa-heart"></i>
+        </button>
+        <p class="restaurants__restaurant__new">Nouveau</p>
+      </figure>
+      <figure class="restaurants__restaurant">
+        <a
+          href="/menus/à-la-française.html"
+          class="restaurants__restaurant__link"
+        >
+          <img
+            class="restaurants__restaurant__img"
+            src="/public/img/restaurants/à-la-française.jpg"
+            alt="Photo d'un plat de À la française"
+          />
+          <figcaption class="restaurants__restaurant__text">
+            <h3 class="restaurants__restaurant__heading">À la française</h3>
+            <p>Cité rouge</p>
+          </figcaption>
+        </a>
+        <button type="button" class="restaurants__restaurant__like">
+          <i class="far fa-heart"></i>
+        </button>
+      </figure>
+      <figure class="restaurants__restaurant">
+        <a
+          href="/menus/le-délice-des-sens.html"
+          class="restaurants__restaurant__link"
+        >
+          <img
+            class="restaurants__restaurant__img"
+            src="/public/img/restaurants/le-délice-des-sens.jpg"
+            alt="Photo d'un plat de Le délice des sens"
+          />
+          <figcaption class="restaurants__restaurant__text">
+            <h3 class="restaurants__restaurant__heading">Le délice des sens</h3>
+            <p>Folie-Méricourt</p>
+          </figcaption>
+        </a>
+        <button type="button" class="restaurants__restaurant__like">
+          <i class="far fa-heart"></i>
+        </button>
+      </figure>
+    </section>
     <footer class="footer">
-      <h2 class="footer__h2">ohmyfood</h2>
+      <h2 class="footer__heading">ohmyfood</h2>
       <ul class="footer__ul">
         <li class="ul__li">
           <a class="li__a" href="#"
