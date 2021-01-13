@@ -1,0 +1,19 @@
+.search-city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__city-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    width: 100%;
+    height: 50px;
+
+    input {
+      border: none;
+      text-align: center;
+      background-color: #eaeaea;
+    }
+  }
+}
