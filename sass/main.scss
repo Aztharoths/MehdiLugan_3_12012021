@@ -1,7 +1,12 @@
 @import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
 
 @import "./base/base";
 @import "./base/typography";
 
+@import "./components/btn";
+
 @import "./layout/header";
 @import "./layout/search-city";
+@import "./layout/manual";

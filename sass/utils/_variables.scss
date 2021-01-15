@@ -1,7 +1,27 @@
+/*-------------------------------------*\
+$font$
+\*-------------------------------------*/
+
+$font-family-base: "roboto";
+$font-family-heading: "Shrikhand";
+$font-size-base: 14px;
+
+$font-size: (
+  "small": 0.9rem,
+  "normal": 1rem,
+  "l": 1.25rem,
+  "xl": 1.5rem,
+  "xxl": 2rem,
+);
+
+/*-------------------------------------*\
+$color$
+\*-------------------------------------*/
+
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
-
-$font-size: (
-  "normal": 1rem,
-);
+$color-black: #000;
+$color-white: #fff;
+$bg: #f6f6f6;
+$bg-2nd: #eaeaea;

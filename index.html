@@ -20,18 +20,19 @@
       <header class="header">
         <h1 class="header__heading">ohmyfood</h1>
       </header>
-      <form class="search-city" method="GET" action="#">
+      <form class="search-city" method="GET" action="#restaurants">
         <div class="search-city__city-name">
           <label for="city"><i class="fas fa-map-marker-alt"></i></label>
           <input type="text" id="city" name="city" value="Paris, Belleville" />
         </div>
         <h2 class="search-city__heading">Réservez le menu qui vous convient</h2>
-        <p>Découvrez des restaurants d'exception</p>
-        <button type="submit" value="" class="btn btn-order search-city__btn">
+        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+        <button type="submit" value="" class="btn btn__search-city">
           Explorer nos restaurants
         </button>
       </form>
       <section class="manual">
+        <h2 class="manual__heading">Fonctionnement</h2>
         <a class="manual__step" href="#"
           ><span class="manual__step__number">1</span
           ><i class="fas fa-mobile-alt"></i> Choisissez un restaurant</a
@@ -45,8 +46,8 @@
           ><i class="fas fa-store"></i> Dégustez au restaurant</a
         >
       </section>
-      <section class="restaurants">
-        <h2 class="restaurants__heading"></h2>
+      <section id="resaurants" class="restaurants">
+        <h2 class="restaurants__heading">Restaurants</h2>
         <figure class="restaurants__restaurant">
           <a
             href="/menus/la-palette-du-goût.html"

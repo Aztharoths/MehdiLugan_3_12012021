@@ -1,0 +1,6 @@
+.manual {
+  @include flex(column);
+  &__heading {
+    align-self: flex-start;
+  }
+}

@@ -1,3 +1,9 @@
+/*-------------------------------------*\
+$font$
+\*-------------------------------------*/
+/*-------------------------------------*\
+$color$
+\*-------------------------------------*/
 html,
 body,
 #bloc_page {
@@ -8,7 +14,7 @@ body,
 html,
 body,
 #bloc_page {
-  font-family: "Roboto", sans-serif;
+  font-family: "roboto", sans-serif;
   font-size: 14px;
 }
 
@@ -16,31 +22,95 @@ h1,
 .footer__heading,
 .menu__heading {
   font-family: "Shrikhand", cursive;
+  font-weight: 500;
+}
+
+.btn {
+  cursor: pointer;
+  color: #000;
+  margin: 0px;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+  outline-style: none;
+}
+.btn__search-city {
+  background: linear-gradient(#ff79da, #9356dc);
+  height: 50px;
+  width: 220px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  color: #fff;
+  box-shadow: 4px 4px 4px #d1d1d1;
 }
 
 .header {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 4px #d1d1d1;
+  height: 60px;
+  margin-bottom: 4px;
+}
+.header__heading {
+  font-size: 2rem;
 }
 
 .search-city {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  background-color: #f6f6f6;
+  color: #2b2b2b;
+  padding-bottom: 50px;
 }
 .search-city__city-name {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
   background-color: #eaeaea;
   width: 100%;
   height: 50px;
+  margin-bottom: 35px;
 }
 .search-city__city-name input {
+  color: #2b2b2b;
+  margin: 0;
+  text-align: start;
   border: none;
-  text-align: center;
   background-color: #eaeaea;
+  font-weight: 550;
+  font-size: 1.1rem;
+  width: 60%;
+  padding-left: 30px;
+  outline-style: none;
+}
+.search-city__heading {
+  color: #000;
+  margin: 0px;
+  text-align: center;
+  font-weight: 900;
+  padding: 5px 15%;
+}
+.search-city p {
+  color: #575742;
+  margin: 0px;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 10px 10% 20px 10%;
+}
+
+.manual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.manual__heading {
+  align-self: flex-start;
 }
 
 /*# sourceMappingURL=style.css.map */

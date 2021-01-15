@@ -1,0 +1,17 @@
+@mixin text($color: $color-black, $margin: 0px, $text-align: center) {
+  color: $color;
+  margin: $margin;
+  text-align: $text-align;
+}
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin box-shadow($size: 0px, $color: lightness-shift-shadow($bg-2nd)) {
+  box-shadow: $size $size $size $color;
+}
+@mixin gradient {
+  background: linear-gradient($secondary-color, $primary-color);
+}

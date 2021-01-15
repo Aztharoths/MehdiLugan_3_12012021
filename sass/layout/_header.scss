@@ -1,5 +1,9 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
+  @include box-shadow(4px);
+  height: 60px;
+  margin-bottom: 4px;
+  &__heading {
+    font-size: map-get($font-size, xxl);
+  }
 }
