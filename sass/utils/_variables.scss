@@ -6,14 +6,6 @@ $font-family-base: "roboto";
 $font-family-heading: "Shrikhand";
 $font-size-base: 14px;
 
-$font-size: (
-  "small": 0.9rem,
-  "normal": 1rem,
-  "l": 1.25rem,
-  "xl": 1.5rem,
-  "xxl": 2rem,
-);
-
 /*-------------------------------------*\
 $color$
 \*-------------------------------------*/
@@ -27,3 +19,5 @@ $bg: #f6f6f6;
 $bg-2nd: #eaeaea;
 $color-subtitle: #7e7e7e;
 $gradient: linear-gradient($secondary-color, $primary-color);
+
+$padding-page: 20px;

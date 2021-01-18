@@ -32,7 +32,6 @@ h1,
 
 .btn {
   cursor: pointer;
-  color: #000;
   margin: 0px;
   text-align: center;
   border: none;
@@ -46,84 +45,15 @@ h1,
   border-radius: 50px;
   font-size: 1.1rem;
   color: #fff;
-  box-shadow: 4px 4px 4px #d1d1d1;
-}
-
-.restaurant {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  width: 300px;
-  height: 250px;
-  position: relative;
-  background-color: #f6f6f6;
-  border-radius: 20px;
-  box-shadow: 4px 4px 4px #d1d1d1;
-}
-.restaurant__link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-.restaurant__img {
-  width: 100%;
-  height: 70%;
-  border-radius: 20px 20px 0 0;
-  object-fit: cover;
-}
-.restaurant__text {
-  background-color: #fff;
-  border-radius: 0 0 20px 20px;
-  padding-left: 15px;
-  width: calc(100% - 15px);
-  height: 30%;
-}
-.restaurant__heading {
-  margin-bottom: 0;
-  font-weight: bold;
-}
-.restaurant p {
-  margin-top: 5px;
-  color: #7e7e7e;
-}
-.restaurant__btn {
-  position: absolute;
-  bottom: 30px;
-  right: 25px;
-  background-color: #fff;
-  font-size: 1rem;
-  transform: scale(1.5, 1.7);
-  color: #7e7e7e;
-}
-.restaurant__btn::before {
-  background-color: blue;
-}
-.restaurant__new {
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  width: 80px;
-  height: 30px;
-  background-color: #99e2d0;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2px;
+  box-shadow: 4px 4px 10px #d1d1d1;
 }
 
 .header {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  box-shadow: 4px 4px 4px #d1d1d1;
+  box-shadow: 0px 4px 4px #d1d1d1;
   height: 60px;
   margin-bottom: 4px;
 }
@@ -133,7 +63,7 @@ h1,
 
 .search-city {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
@@ -142,66 +72,65 @@ h1,
 }
 .search-city__city-name {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
   background-color: #eaeaea;
   width: 100%;
   height: 50px;
   margin-bottom: 35px;
 }
-.search-city__city-name input {
+.search-city label {
+  position: relative;
+  left: -10px;
+}
+.search-city input {
   color: #2b2b2b;
-  margin: 0;
-  text-align: start;
   border: none;
+  width: 115px;
   background-color: #eaeaea;
   font-weight: 550;
   font-size: 1.1rem;
-  width: 60%;
-  padding-left: 30px;
   outline-style: none;
 }
 .search-city__heading {
-  color: #000;
-  margin: 0px;
+  margin: 5px 15%;
   text-align: center;
   font-weight: 900;
-  padding: 5px 15%;
 }
 .search-city p {
-  color: #7e7e7e;
   margin: 10px 10% 20px 10%;
   text-align: center;
+  color: #7e7e7e;
   font-size: 1.2rem;
 }
 
 .manual {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
 .manual__heading {
   padding-left: 20px;
-  align-self: start;
+  width: 100%;
 }
 .manual__step {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: start;
   align-items: center;
-  box-shadow: 4px 4px 4px #d1d1d1;
+  box-shadow: 4px 4px 10px #d1d1d1;
   border-radius: 20px;
   width: 90%;
   max-width: 375px;
   height: 75px;
   background-color: #f6f6f6;
-  margin: 10px 0;
+  margin: 10px 0px 10px 20px;
 }
 .manual__step__number {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   background-color: #9356dc;
@@ -215,12 +144,12 @@ h1,
 .manual__step i {
   color: #7e7e7e;
   font-size: 1.25rem;
-  padding: 0 20px;
+  width: 25px;
+  padding: 0 15px;
 }
 .manual__step__text {
-  text-align: center;
   font-weight: bold;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 .manual__step:hover {
   background-color: #f5edff;
@@ -231,12 +160,83 @@ h1,
 
 .restaurants {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 .restaurants__heading {
   align-self: flex-start;
+  padding-left: 20px;
+}
+.restaurants__restaurant {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 250px;
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px #d1d1d1;
+}
+.restaurants__restaurant__link {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.restaurants__restaurant__img {
+  width: 100%;
+  height: 70%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+.restaurants__restaurant__new {
+  position: absolute;
+  right: 12px;
+  top: 7px;
+  width: 80px;
+  height: 30px;
+  background-color: #99e2d0;
+  color: #39ac90;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+.restaurants__restaurant__text {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  height: 30%;
+}
+.restaurants__restaurant__text__heading {
+  margin: 15px 0 5px 10px;
+  font-weight: bold;
+}
+.restaurants__restaurant__text p {
+  margin: 0px 0px 15px 10px;
+  color: #7e7e7e;
+}
+.restaurants__restaurant__text__btn {
+  align-self: flex-end;
+  margin: 25px 20px 0 0;
+  font-size: 1rem;
+  transform: scale(1.5, 1.7);
+  color: #7e7e7e;
+  background-color: #fff;
+}
+.restaurants__restaurant__text__btn:hover i {
+  font-weight: 900;
+  background: linear-gradient(#ff79da, #9356dc);
 }
 
 /*# sourceMappingURL=style.css.map */

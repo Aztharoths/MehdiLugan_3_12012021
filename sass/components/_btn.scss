@@ -1,6 +1,6 @@
 .btn {
   cursor: pointer;
-  @include text;
+  @include text-position;
   border: none;
   font-weight: bold;
   outline-style: none;
@@ -11,6 +11,6 @@
     border-radius: 50px;
     font-size: 1.1rem;
     color: $color-white;
-    @include box-shadow(4px);
+    @include box-shadow;
   }
 }

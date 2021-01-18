@@ -20,7 +20,7 @@
       <header class="header">
         <h1 class="header__heading">ohmyfood</h1>
       </header>
-      <form class="search-city" method="GET" action="#restaurants">
+      <form class="search-city" method="GET" action="index.html">
         <div class="search-city__city-name">
           <label for="city"><i class="fas fa-map-marker-alt"></i></label>
           <input type="text" id="city" name="city" value="Paris, Belleville" />
@@ -51,73 +51,104 @@
       </section>
       <section class="restaurants">
         <h2 class="restaurants__heading">Restaurants</h2>
-        <figure class="restaurant">
-          <a href="/menus/la-palette-du-goût.html" class="restaurant__link">
+        <figure class="restaurants__restaurant">
+          <a
+            href="/menus/la-palette-du-goût.html"
+            class="restaurants__restaurant__link"
+          >
+            <p class="restaurants__restaurant__new">Nouveau</p>
             <img
-              class="restaurant__img"
+              class="restaurants__restaurant__img"
               src="/public/img/restaurants/la-palette-du-goût.jpg"
               alt="Photo d'un plat de La palette du goût"
             />
-            <figcaption class="restaurant__text">
-              <h3 class="restaurant__heading">La palette du goût</h3>
+            <figcaption class="restaurants__restaurant__text">
+              <h3 class="restaurants__restaurant__text__heading">
+                La palette du goût
+              </h3>
               <p>Ménilmontant</p>
+              <button
+                type="button"
+                class="btn btn__like restaurants__restaurant__text__btn"
+              >
+                <i class="far fa-heart"></i>
+              </button>
             </figcaption>
           </a>
-          <button type="button" class="btn btn__like restaurant__btn">
-            <i class="far fa-heart"></i>
-          </button>
-          <p class="restaurant__new">Nouveau</p>
         </figure>
-        <!--
-        <figure class="restaurant">
-          <a href="/menus/la-note-enchantée.html" class="restaurant__link">
+        <figure class="restaurants__restaurant">
+          <a
+            href="/menus/la-note-enchantée.html"
+            class="restaurants__restaurant__link"
+          >
+            <p class="restaurants__restaurant__new">Nouveau</p>
             <img
-              class="restaurant__img"
+              class="restaurants__restaurant__img"
               src="/public/img/restaurants/la-note-enchantée.jpg"
               alt="Photo d'un plat de La note enchantée"
             />
-            <figcaption class="restaurant__text">
-              <h3 class="restaurant__heading">La note enchantée</h3>
+            <figcaption class="restaurants__restaurant__text">
+              <h3 class="restaurants__restaurant__text__heading">
+                La note enchantée
+              </h3>
               <p>Charonne</p>
+              <button
+                type="button"
+                class="btn btn__like restaurants__restaurant__text__btn"
+              >
+                <i class="far fa-heart"></i>
+              </button>
             </figcaption>
           </a>
-          <button type="button" class="btn btn__like restaurant__btn">
-            <i class="far fa-heart"></i>
-          </button>
-          <p class="restaurant__new">Nouveau</p>
         </figure>
-        <figure class="restaurant">
-          <a href="/menus/à-la-française.html" class="restaurant__link">
+        <figure class="restaurants__restaurant">
+          <a
+            href="/menus/à-la-française.html"
+            class="restaurants__restaurant__link"
+          >
             <img
-              class="restaurant__img"
+              class="restaurants__restaurant__img"
               src="/public/img/restaurants/à-la-française.jpg"
               alt="Photo d'un plat de À la française"
             />
-            <figcaption class="restaurant__text">
-              <h3 class="restaurant__heading">À la française</h3>
+            <figcaption class="restaurants__restaurant__text">
+              <h3 class="restaurants__restaurant__text__heading">
+                À la française
+              </h3>
               <p>Cité rouge</p>
+              <button
+                type="button"
+                class="btn btn__like restaurants__restaurant__text__btn"
+              >
+                <i class="far fa-heart"></i>
+              </button>
             </figcaption>
           </a>
-          <button type="button" class="btn btn__like restaurant__btn">
-            <i class="far fa-heart"></i>
-          </button>
         </figure>
-        <figure class="restaurant">
-          <a href="/menus/le-délice-des-sens.html" class="restaurant__link">
+        <figure class="restaurants__restaurant">
+          <a
+            href="/menus/le-délice-des-sens.html"
+            class="restaurants__restaurant__link"
+          >
             <img
-              class="restaurant__img"
+              class="restaurants__restaurant__img"
               src="/public/img/restaurants/le-délice-des-sens.jpg"
               alt="Photo d'un plat de Le délice des sens"
             />
-            <figcaption class="restaurant__text">
-              <h3 class="restaurant__heading">Le délice des sens</h3>
+            <figcaption class="restaurants__restaurant__text">
+              <h3 class="restaurants__restaurant__text__heading">
+                Le délice des sens
+              </h3>
               <p>Folie-Méricourt</p>
+              <button
+                type="button"
+                class="btn btn__like restaurants__restaurant__text__btn"
+              >
+                <i class="far fa-heart"></i>
+              </button>
             </figcaption>
           </a>
-          <button type="button" class="btn btn__like restaurant__btn">
-            <i class="far fa-heart"></i>
-          </button>
-        </figure>-->
+        </figure>
       </section>
       <footer class="footer">
         <h2 class="footer__heading">ohmyfood</h2>

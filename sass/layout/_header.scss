@@ -1,9 +1,9 @@
 .header {
   @include flex;
-  @include box-shadow(4px);
+  @include box-shadow(0px, 4px, 4px);
   height: 60px;
   margin-bottom: 4px;
   &__heading {
-    font-size: map-get($font-size, xxl);
+    font-size: 2rem;
   }
 }
