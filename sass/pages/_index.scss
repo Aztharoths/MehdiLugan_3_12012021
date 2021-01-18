@@ -71,7 +71,11 @@
       padding-left: 10px;
     }
     &:hover {
-      background-color: #f5edff;
+      background-color: change-color(
+        $primary-color,
+        $saturation: 60%,
+        $lightness: 95%
+      );
       i {
         color: $primary-color;
       }
@@ -80,6 +84,9 @@
 }
 .restaurants {
   @include flex(column);
+  padding: 30px 0;
+  margin-top: 50px;
+  background: $bg;
   &__heading {
     align-self: flex-start;
     padding-left: $padding-page;

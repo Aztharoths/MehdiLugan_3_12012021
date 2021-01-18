@@ -1,0 +1,23 @@
+.footer {
+  padding: 20px 0 20px $padding-page;
+
+  background: $color-bg-footer;
+  &__heading {
+    margin: 0px;
+    color: $color-white;
+  }
+  &__ul {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0px;
+    &__li {
+      margin-bottom: 10px;
+      &__a {
+        color: $color-white;
+        i {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
