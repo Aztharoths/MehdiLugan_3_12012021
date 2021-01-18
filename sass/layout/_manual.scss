@@ -1,6 +1,43 @@
 .manual {
   @include flex(column);
   &__heading {
-    align-self: flex-start;
+    padding-left: 20px;
+    align-self: start;
+  }
+  &__step {
+    @include flex(row, start);
+    @include box-shadow(4px);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 375px;
+    height: 75px;
+    background-color: $bg;
+    margin: 10px 0;
+    &__number {
+      @include flex;
+      background-color: $primary-color;
+      color: $color-white;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      position: relative;
+      left: -10px;
+    }
+    i {
+      color: #7e7e7e;
+      font-size: map-get($font-size, l);
+      padding: 0 20px;
+    }
+    &__text {
+      text-align: center;
+      font-weight: bold;
+      padding-left: 20px;
+    }
+    &:hover {
+      background-color: #f5edff;
+      i {
+        color: $primary-color;
+      }
+    }
   }
 }

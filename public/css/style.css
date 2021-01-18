@@ -11,6 +11,11 @@ body,
   box-sizing: border-box;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 html,
 body,
 #bloc_page {
@@ -96,10 +101,10 @@ h1,
   padding: 5px 15%;
 }
 .search-city p {
-  color: #575742;
+  color: #7e7e7e;
   margin: 0px;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   padding: 10px 10% 20px 10%;
 }
 
@@ -110,7 +115,50 @@ h1,
   align-items: center;
 }
 .manual__heading {
-  align-self: flex-start;
+  padding-left: 20px;
+  align-self: start;
+}
+.manual__step {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 4px 4px 4px #d1d1d1;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 375px;
+  height: 75px;
+  background-color: #f6f6f6;
+  margin: 10px 0;
+}
+.manual__step__number {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356dc;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  left: -10px;
+}
+.manual__step i {
+  color: #7e7e7e;
+  font-size: 1.25rem;
+  padding: 0 20px;
+}
+.manual__step__text {
+  text-align: center;
+  font-weight: bold;
+  padding-left: 20px;
+}
+.manual__step:hover {
+  background-color: #f5edff;
+}
+.manual__step:hover i {
+  color: #9356dc;
 }
 
 /*# sourceMappingURL=style.css.map */
