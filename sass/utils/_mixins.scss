@@ -12,6 +12,3 @@
 @mixin box-shadow($size: 0px, $color: lightness-shift-shadow($bg-2nd)) {
   box-shadow: $size $size $size $color;
 }
-@mixin gradient {
-  background: linear-gradient($secondary-color, $primary-color);
-}
