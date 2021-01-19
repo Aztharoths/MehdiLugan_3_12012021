@@ -1,0 +1,22 @@
+{
+  "name": "mehdilugan_3_12012021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aztharoths/MehdiLugan_3_12012021.git"
+  },
+  "author": "Aztharoths",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aztharoths/MehdiLugan_3_12012021/issues"
+  },
+  "homepage": "https://github.com/Aztharoths/MehdiLugan_3_12012021#readme",
+  "dependencies": {
+    "sass": "^1.32.4"
+  }
+}

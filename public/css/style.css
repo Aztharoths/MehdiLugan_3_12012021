@@ -1,0 +1,529 @@
+/*-------------------------------------*\
+$font$
+\*-------------------------------------*/
+/*-------------------------------------*\
+$color$
+\*-------------------------------------*/
+html,
+body,
+#bloc_page {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+html,
+body,
+#bloc_page {
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+}
+
+h1,
+.footer__heading,
+.menu__heading {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 0px;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+  outline-style: none;
+}
+.btn__explore-order {
+  background: linear-gradient(#ff79da, #9356dc);
+  height: 50px;
+  width: 220px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  color: #fff;
+  box-shadow: 4px 4px 10px #d1d1d1;
+}
+.btn__like {
+  font-size: 1rem;
+  transform: scale(1.5, 1.7);
+  color: #7e7e7e;
+  background: none;
+  z-index: 2;
+}
+.btn__like:hover i, .btn__like:active i, .btn__like:focus i {
+  font-weight: 900;
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header {
+  box-shadow: 0px 4px 4px #d1d1d1;
+  background-color: #fff;
+  height: 60px;
+  margin-bottom: 4px;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.header__heading {
+  font-size: 2rem;
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: center;
+}
+.header a {
+  grid-row: 1;
+  grid-column: 1;
+  margin-left: 20px;
+  font-size: 2rem;
+  width: 25px;
+}
+
+.footer {
+  padding: 20px 0 20px 20px;
+  background: #353535;
+}
+.footer__heading {
+  margin: 0px;
+  color: #fff;
+}
+.footer__ul {
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0px;
+}
+.footer__ul__li {
+  margin-bottom: 10px;
+}
+.footer__ul__li__a {
+  color: #fff;
+}
+.footer__ul__li__a i {
+  width: 20px;
+}
+
+/*----------------------------------------*\
+
+@>700<@
+
+\*----------------------------------------*/
+@media (min-width: 700px) {
+  .footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  .footer__ul {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+/*----------------------------------------*\
+
+<SEARCH-CITY>
+
+\*----------------------------------------*/
+.search-city {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  color: #2b2b2b;
+  padding-bottom: 50px;
+}
+.search-city__city-name {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 35px;
+}
+.search-city label {
+  position: relative;
+  left: -10px;
+}
+.search-city input {
+  color: #2b2b2b;
+  border: none;
+  width: 115px;
+  background-color: #eaeaea;
+  font-weight: 550;
+  font-size: 1.1rem;
+  outline-style: none;
+}
+.search-city__heading {
+  margin: 5px 15%;
+  text-align: center;
+  font-weight: 900;
+}
+.search-city p {
+  margin: 10px 10% 20px 10%;
+  text-align: center;
+  color: #7e7e7e;
+  font-size: 1.2rem;
+}
+
+/*----------------------------------------*\
+
+<MANUAL>
+
+\*----------------------------------------*/
+.manual {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding-bottom: 60px;
+}
+.manual__heading {
+  padding-left: 20px;
+  width: 100%;
+}
+.manual__step {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 4px 4px 10px #d1d1d1;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 375px;
+  height: 75px;
+  background-color: #f6f6f6;
+  margin: 10px 0px 10px 20px;
+}
+.manual__step__number {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356dc;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  left: -10px;
+}
+.manual__step i {
+  color: #7e7e7e;
+  font-size: 1.25rem;
+  width: 25px;
+  padding: 0 15px;
+}
+.manual__step__text {
+  font-weight: bold;
+  padding-left: 10px;
+}
+.manual__step:hover {
+  background-color: #f2ebfa;
+}
+.manual__step:hover i {
+  color: #9356dc;
+}
+
+/*----------------------------------------*\
+
+<RESTAURANTS>
+
+\*----------------------------------------*/
+.restaurants {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  background: #f6f6f6;
+}
+.restaurants__heading {
+  align-self: flex-start;
+  padding-left: 20px;
+}
+.restaurants__link {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 250px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px #d1d1d1;
+  margin-bottom: 20px;
+}
+.restaurants__link__fig {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.restaurants__link__fig__new {
+  position: absolute;
+  right: 12px;
+  top: 7px;
+  width: 80px;
+  height: 30px;
+  background-color: #99e2d0;
+  color: #39ac90;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+.restaurants__link__fig__img {
+  width: 100%;
+  height: 70%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+.restaurants__link__fig__figcaption {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  height: 30%;
+}
+.restaurants__link__fig__figcaption__heading {
+  margin: 15px 0 5px 10px;
+  font-weight: bold;
+}
+.restaurants__link__fig__figcaption p {
+  margin: 0px 0px 15px 10px;
+  color: #7e7e7e;
+}
+.restaurants__link__fig__figcaption__btn {
+  align-self: flex-end;
+  margin-right: 15px;
+  margin-top: 25px;
+}
+
+/*----------------------------------------*\
+
+@>700<@
+
+\*----------------------------------------*/
+@media (min-width: 700px) {
+  /*----------------------------------------*\
+
+  <RESTAURANTS>
+
+  \*----------------------------------------*/
+  .restaurants {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .restaurants__heading {
+    width: 100%;
+  }
+  .restaurants__link {
+    width: 40%;
+    margin: 10px;
+  }
+}
+/*----------------------------------------*\
+
+@>1500<@
+
+\*----------------------------------------*/
+@media (min-width: 1500px) {
+  /*----------------------------------------*\
+
+  <RESTAURANTS>
+
+  \*----------------------------------------*/
+  .restaurants__link {
+    width: 20%;
+  }
+}
+img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.menu {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #f6f6f6;
+  position: relative;
+  top: -50px;
+  border-radius: 30px 30px 0 0;
+}
+.menu__heading {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+.menu__dishes {
+  width: 90%;
+}
+.menu__dishes__heading {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.menu__dishes__heading__border {
+  background-color: #99e2d0;
+  margin: 5px 0 0 0;
+  height: 3px;
+  width: 40px;
+}
+.menu__dishes__dish {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  background: #fff;
+  margin: 10px 0;
+  box-shadow: 4px 4px 10px #d1d1d1;
+  border-radius: 20px;
+  height: 70px;
+}
+.menu__dishes__dish__heading {
+  margin: 15px 0 0 15px;
+  width: 65%;
+}
+.menu__dishes__dish__desc {
+  margin: 5px 0 0 15px;
+}
+.menu__dishes__dish__price {
+  align-self: flex-end;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu__dishes__dish__btn {
+  height: 100%;
+  background: #99e2d0;
+  color: #fff;
+  width: 0px;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 4px 4px 10px #d1d1d1;
+  visibility: collapse;
+  transition: width 500ms;
+}
+.menu__dishes__dish__btn i {
+  transition: transform 500ms;
+}
+.menu__dishes__dish:hover button {
+  visibility: visible;
+  transform: rotate(1turn);
+  width: 15%;
+}
+.menu__dishes__dish:hover button i {
+  transform: rotate(1turn);
+}
+.menu__dishes__dish:hover button:hover, .menu__dishes__dish:hover button:active, .menu__dishes__dish:hover button:focus {
+  background-color: #ebfaf6;
+  border: 2px solid #99e2d0;
+  color: #99e2d0;
+}
+.menu__btn {
+  margin-top: 50px;
+}
+
+/*----------------------------------------*\
+
+@>700<@
+
+\*----------------------------------------*/
+@media (min-width: 700px) {
+  .menu {
+    display: grid;
+    grid-template-rows: 75px 1fr 1fr 75px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .menu__heading {
+    grid-row: 1;
+    grid-column: 1/span 2;
+    justify-self: center;
+    justify-content: center;
+  }
+  .menu__heading i {
+    margin-left: 50px;
+  }
+  .menu__dishes {
+    margin: auto;
+  }
+  .menu__dishes:nth-of-type(1) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .menu__dishes:nth-of-type(2) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .menu__dishes:nth-of-type(3) {
+    width: 60%;
+    grid-row: 3;
+    grid-column: 1/span 2;
+  }
+  .menu__btn {
+    grid-row: 4;
+    grid-column: 1/span 2;
+    justify-self: center;
+  }
+}
+/*----------------------------------------*\
+
+@>1400<@
+
+\*----------------------------------------*/
+@media (min-width: 1400px) {
+  .menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu__heading {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: dashed 2px #99e2d0;
+  }
+  .menu__dishes {
+    width: 30%;
+  }
+  .menu__dishes:nth-of-type(3) {
+    width: 30%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

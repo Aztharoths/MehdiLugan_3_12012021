@@ -1,0 +1,12 @@
+html,
+body,
+#bloc_page {
+  font-family: $font-family-base, sans-serif;
+  font-size: $font-size-base;
+}
+h1,
+.footer__heading,
+.menu__heading {
+  font-family: $font-family-heading, cursive;
+  font-weight: 500;
+}

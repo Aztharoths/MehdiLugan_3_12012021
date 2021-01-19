@@ -1,0 +1,204 @@
+/*----------------------------------------*\
+
+<SEARCH-CITY>
+
+\*----------------------------------------*/
+
+.search-city {
+  @include flex(column);
+  background-color: $bg;
+  color: lightness-shift-text($bg-2nd);
+  padding-bottom: 50px;
+  &__city-name {
+    @include flex;
+    background-color: $bg-2nd;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 35px;
+  }
+  label {
+    position: relative;
+    left: -10px;
+  }
+  input {
+    color: lightness-shift-text($bg-2nd);
+    border: none;
+    width: 115px;
+    background-color: $bg-2nd;
+    font-weight: 550;
+    font-size: 1.1rem;
+    outline-style: none;
+  }
+
+  &__heading {
+    @include text-position(5px 15%);
+    font-weight: 900;
+  }
+  p {
+    @include text-position(10px 10% 20px 10%);
+    color: $color-subtitle;
+    font-size: 1.2rem;
+  }
+}
+/*----------------------------------------*\
+
+<MANUAL>
+
+\*----------------------------------------*/
+
+.manual {
+  @include flex(row, wrap);
+  background-color: $color-white;
+  padding-bottom: 60px;
+  &__heading {
+    padding-left: $padding-page;
+    width: 100%;
+  }
+  &__step {
+    @include flex(row, nowrap, start);
+    @include box-shadow;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 375px;
+    height: 75px;
+    background-color: $bg;
+    margin: 10px 0px 10px 20px;
+    &__number {
+      @include flex;
+      background-color: $primary-color;
+      color: $color-white;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      position: relative;
+      left: -10px;
+    }
+    i {
+      color: $color-subtitle;
+      font-size: 1.25rem;
+      width: 25px;
+      padding: 0 15px;
+    }
+    &__text {
+      font-weight: bold;
+      padding-left: 10px;
+    }
+    &:hover {
+      background-color: change-color(
+        $primary-color,
+        $saturation: 60%,
+        $lightness: 95%
+      );
+      i {
+        color: $primary-color;
+      }
+    }
+  }
+}
+/*----------------------------------------*\
+
+<RESTAURANTS>
+
+\*----------------------------------------*/
+.restaurants {
+  @include flex(column);
+  padding: 30px 0;
+  background: $bg;
+  &__heading {
+    align-self: flex-start;
+    padding-left: $padding-page;
+  }
+  &__link {
+    @include flex(column);
+    width: 90%;
+    height: 250px;
+    background-color: $bg;
+    border-radius: 20px;
+    @include box-shadow;
+    margin-bottom: 20px;
+
+    &__fig {
+      @include flex(column);
+      position: relative;
+      margin: 0px;
+      width: 100%;
+      height: 100%;
+      &__new {
+        position: absolute;
+        right: 12px;
+        top: 7px;
+        width: 80px;
+        height: 30px;
+        background-color: $tertiary-color;
+        color: change-color($tertiary-color, $saturation: 50%, $lightness: 45%);
+        @include flex;
+        border-radius: 2px;
+      }
+      &__img {
+        width: 100%;
+        height: 70%;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+      }
+      &__figcaption {
+        @include flex(column, wrap, flex-start, flex-start);
+        background-color: $color-white;
+        border-radius: 0 0 20px 20px;
+        width: 100%;
+        height: 30%;
+        &__heading {
+          margin: 15px 0 5px 10px;
+          font-weight: bold;
+        }
+        p {
+          margin: 0px 0px 15px 10px;
+          color: $color-subtitle;
+        }
+        &__btn {
+          align-self: flex-end;
+          margin-right: 15px;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}
+/*----------------------------------------*\
+
+@>700<@
+
+\*----------------------------------------*/
+@media (min-width: 700px) {
+  /*----------------------------------------*\
+
+  <RESTAURANTS>
+
+  \*----------------------------------------*/
+  .restaurants {
+    @include flex(row, wrap, space-evenly);
+    &__heading {
+      width: 100%;
+    }
+    &__link {
+      width: 40%;
+      margin: 10px;
+    }
+  }
+}
+/*----------------------------------------*\
+
+@>1500<@
+
+\*----------------------------------------*/
+@media (min-width: 1500px) {
+  /*----------------------------------------*\
+
+  <RESTAURANTS>
+
+  \*----------------------------------------*/
+  .restaurants {
+    &__link {
+      width: 20%;
+    }
+  }
+}

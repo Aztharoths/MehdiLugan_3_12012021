@@ -1,0 +1,14 @@
+@function lightness-shift-shadow($colour) {
+  @if (lightness($colour) < 25%) {
+    @return lighten($colour, 10%);
+  } @else {
+    @return darken($colour, 10%);
+  }
+}
+@function lightness-shift-text($colour) {
+  @if (lightness($colour) < 25%) {
+    @return lighten($colour, 75%);
+  } @else {
+    @return darken($colour, 75%);
+  }
+}

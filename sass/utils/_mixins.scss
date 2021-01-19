@@ -1,0 +1,18 @@
+@mixin text-position($marging: 0px, $text-align: center) {
+  margin: $marging;
+  text-align: $text-align;
+}
+@mixin flex($direction: row, $wrap: nowrap, $justify: center, $align: center) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin box-shadow(
+  $sizeR: 4px,
+  $sizeB: 4px,
+  $size-spread: 10px,
+  $color: lightness-shift-shadow($bg-2nd)
+) {
+  box-shadow: $sizeR $sizeB $size-spread $color;
+}
