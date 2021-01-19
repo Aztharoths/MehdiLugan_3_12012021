@@ -331,7 +331,7 @@ h1,
   .restaurants__heading {
     width: 100%;
   }
-  .restaurants__restaurant {
+  .restaurants__link {
     width: 40%;
     margin: 10px;
   }
@@ -347,7 +347,7 @@ h1,
   <RESTAURANTS>
 
   \*----------------------------------------*/
-  .restaurants__restaurant {
+  .restaurants__link {
     width: 20%;
   }
 }
