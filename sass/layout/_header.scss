@@ -1,9 +1,23 @@
 .header {
-  @include flex;
   @include box-shadow(0px, 4px, 4px);
+  background-color: $color-white;
   height: 60px;
   margin-bottom: 4px;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
   &__heading {
     font-size: 2rem;
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: center;
+  }
+  a {
+    grid-row: 1;
+    grid-column: 1;
+    margin-left: $padding-page;
+    font-size: 2rem;
+    width: 25px;
   }
 }

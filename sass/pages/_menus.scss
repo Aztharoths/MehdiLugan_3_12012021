@@ -1,7 +1,3 @@
-.header {
-  box-shadow: none;
-  margin: 0;
-}
 img {
   width: 100%;
   height: 280px;
@@ -9,7 +5,7 @@ img {
 }
 .menu {
   @include flex(column);
-  background: $bg-2nd;
+  background: $bg;
   position: relative;
   top: -50px;
   border-radius: 30px 30px 0 0;
@@ -39,19 +35,47 @@ img {
       &__price {
         align-self: flex-end;
         height: 100%;
-        margin-right: 15px;
         @include flex(column, nowrap, flex-end);
       }
       &__btn {
         height: 100%;
         background: $tertiary-color;
         color: $color-white;
-        width: 15%;
+        width: 0px;
+        font-size: 1.5rem;
         align-self: flex-end;
         border-radius: 0 20px 20px 0;
         @include box-shadow;
-        display: none;
+        visibility: collapse;
+        transition: width 500ms;
+        i {
+          transition: transform 500ms;
+        }
+      }
+      &:hover {
+        button {
+          visibility: visible;
+          transform: rotate(1turn);
+          width: 15%;
+          i {
+            transform: rotate(1turn);
+          }
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: change-color(
+              $tertiary-color,
+              $saturation: 60%,
+              $lightness: 95%
+            );
+            border: 2px solid $tertiary-color;
+            color: $tertiary-color;
+          }
+        }
       }
     }
+  }
+  &__btn {
+    margin-top: 50px;
   }
 }
