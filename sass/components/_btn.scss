@@ -4,7 +4,7 @@
   border: none;
   font-weight: bold;
   outline-style: none;
-  &__search-city {
+  &__explore-order {
     background: $gradient;
     height: 50px;
     width: 220px;
@@ -12,5 +12,23 @@
     font-size: 1.1rem;
     color: $color-white;
     @include box-shadow;
+  }
+  &__like {
+    font-size: 1rem;
+    transform: scale(1.5, 1.7);
+    color: $color-subtitle;
+    background: none;
+    z-index: 2;
+    &:hover,
+    &:active,
+    &:focus {
+      i {
+        font-weight: 900;
+        background: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
   }
 }

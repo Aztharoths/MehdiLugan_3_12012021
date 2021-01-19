@@ -16,142 +16,160 @@
     <title>La note enchantée</title>
   </head>
   <body>
-    <div #bloc_page>
+    <div id="bloc_page">
       <header class="header">
         <h1 class="header__heading">
           <a href="/index.html"><i class="fas fa-arrow-left"></i></a> ohmyfood
         </h1>
       </header>
+      <img
+        src="/public/img/restaurants/la-note-enchantée.jpg"
+        alt="Photo d'un plat de La note enchantée"
+      />
       <section class="menu">
-        <img
-          class="menu__img"
-          src="/public/img/restaurants/la-note-enchantée.jpg"
-          alt="Photo d'un plat de La note enchantée"
-        />
-        <h2 class="menu__heading">La note enchantée</h2>
-        <button type="button" class="btn like menu__btn">
-          <i class="far fa-heart"></i>
-        </button>
-
-        <div class="dishes">
+        <h2 class="menu__heading">
+          La note enchantée
+          <button type="button" class="btn btn__like menu__btn">
+            <i class="far fa-heart"></i>
+          </button>
+        </h2>
+        <section class="menu__dishes">
           <h3 class="dishes__heading">Entrées</h3>
-          <div class="dishes__dish">
-            <h4 class="dishes__dish__heading">Ravioles de foie gras</h4>
-            <p class="dishes__dish__desc">
+          <div class="menu__dishes__dish">
+            <h4 class="menu__dishes__dish__heading">Ravioles de foie gras</h4>
+            <p class="menu__dishes__dish__desc">
               Accompagnés de leur crème à la truffe
             </p>
-            <p class="dishes__dish__price">25€</p>
-            <button type="button" class="btn dishes__dish__btn">
+            <p class="menu__dishes__dish__price">25€</p>
+            <button type="button" class="btn menu__dishes__dish__btn">
               <i class="fas fa-check-circle"></i>
             </button>
           </div>
-          <div class="dishes__dish">
-            <h4 class="dishes__dish__heading">Caviar osciètre</h4>
-            <p class="dishes__dish__desc">Sur blini à la farine de blé noir</p>
-            <p class="dishes__dish__price">35€</p>
-            <button type="button" class="btn dishes__dish__btn">
+          <div class="menu__dishes__dish">
+            <h4 class="menu__dishes__dish__heading">Caviar osciètre</h4>
+            <p class="menu__dishes__dish__desc">
+              Sur blini à la farine de blé noir
+            </p>
+            <p class="menu__dishes__dish__price">35€</p>
+            <button type="button" class="btn menu__dishes__dish__btn">
               <i class="fas fa-check-circle"></i>
             </button>
           </div>
-          <div class="dishes__dish">
-            <h4 class="dishes__dish__heading">Homard et espuma de potiron</h4>
-            <p class="dishes__dish__desc">Mariné aux zestes d'orange</p>
-            <p class="dishes__dish__price">20€</p>
-            <button type="button" class="btn dishes__dish__btn">
+          <div class="menu__dishes__dish">
+            <h4 class="menu__dishes__dish__heading">
+              Homard et espuma de potiron
+            </h4>
+            <p class="menu__dishes__dish__desc">Mariné aux zestes d'orange</p>
+            <p class="menu__dishes__dish__price">20€</p>
+            <button type="button" class="btn menu__dishes__dish__btn">
               <i class="fas fa-check-circle"></i>
             </button>
           </div>
-          <div class="dishes__dish">
-            <h4 class="dishes__dish__heading">
+          <div class="menu__dishes__dish">
+            <h4 class="menu__dishes__dish__heading">
               Foie gras de canard cuit entier
             </h4>
-            <p class="dishes__dish__desc">Confiture de figue et pain toasté</p>
-            <p class="dishes__dish__price">35€</p>
-            <button type="button" class="btn dishes__dish__btn">
+            <p class="menu__dishes__dish__desc">
+              Confiture de figue et pain toasté
+            </p>
+            <p class="menu__dishes__dish__price">35€</p>
+            <button type="button" class="btn menu__dishes__dish__btn">
               <i class="fas fa-check-circle"></i>
             </button>
           </div>
-        </div>
-        <div class="dishes">
-          <h3 class="dishes__heading">Plats</h3>
-          <div class="dishes__dish">
-            <h4 class="dishes__dish__heading">
+        </section>
+        <section class="menu__dishes">
+          <h3 class="menu__dishes__heading">Plats</h3>
+          <div class="menu__dishes__dish">
+            <h4 class="menu__dishes__dish__heading">
               Noix de coquilles Saint-Jacques
             </h4>
-            <p class="dishes__dish__desc">Sur lit de purée de céleri-rave</p>
-            <p class="dishes__dish__price">40€</p>
-            <button type="button" class="btn dishes__dish__btn">
+            <p class="menu__dishes__dish__desc">
+              Sur lit de purée de céleri-rave
+            </p>
+            <p class="menu__dishes__dish__price">40€</p>
+            <button type="button" class="btn menu__dishes__dish__btn">
               <i class="fas fa-check-circle"></i>
             </button>
           </div>
-          <div class="dishes__dish">
-            <h4 class="dishes__dish__heading">Langoustine poêlée</h4>
-            <p class="dishes__dish__desc">Purée de patate douce</p>
-            <p class="dishes__dish__price">35€</p>
-            <button type="button" class="btn dishes__dish__btn">
+          <div class="menu__dishes__dish">
+            <h4 class="menu__dishes__dish__heading">Langoustine poêlée</h4>
+            <p class="menu__dishes__dish__desc">Purée de patate douce</p>
+            <p class="menu__dishes__dish__price">35€</p>
+            <button type="button" class="btn menu__dishes__dish__btn">
               <i class="fas fa-check-circle"></i>
             </button>
           </div>
-          <div class="dishes__dish">
-            <h4 class="dishes__dish__heading">Mijoté de queue de boeuf</h4>
-            <p class="dishes__dish__desc">
+          <div class="menu__dishes__dish">
+            <h4 class="menu__dishes__dish__heading">
+              Mijoté de queue de boeuf
+            </h4>
+            <p class="menu__dishes__dish__desc">
               Et riz sauvage aux zestes de citron
             </p>
-            <p class="dishes__dish__price">44€</p>
-            <button type="button" class="btn dishes__dish__btn">
+            <p class="menu__dishes__dish__price">44€</p>
+            <button type="button" class="btn menu__dishes__dish__btn">
               <i class="fas fa-check-circle"></i>
             </button>
           </div>
-        </div>
-        <div class="dishes">
-          <h3 class="dishes__heading">Desserts</h3>
-          <div class="dishes__dish">
-            <h4 class="dishes__dish__heading">Macaron noisette et chocolat</h4>
-            <p class="dishes__dish__desc">
+        </section>
+        <section class="menu__dishes">
+          <h3 class="menu__dishes__heading">Desserts</h3>
+          <div class="menu__dishes__dish">
+            <h4 class="menu__dishes__dish__heading">
+              Macaron noisette et chocolat
+            </h4>
+            <p class="menu__dishes__dish__desc">
               Glace au caramel brun et sel de Guérande
             </p>
-            <p class="dishes__dish__price">18€</p>
-            <button type="button" class="btn dishes__dish__btn">
+            <p class="menu__dishes__dish__price">18€</p>
+            <button type="button" class="btn menu__dishes__dish__btn">
               <i class="fas fa-check-circle"></i>
             </button>
           </div>
-          <div class="dishes__dish">
-            <h4 class="dishes__dish__heading">Baba au rhum revisité</h4>
-            <p class="dishes__dish__desc">Avec son coulis de citron</p>
-            <p class="dishes__dish__price">22€</p>
-            <button type="button" class="btn dishes__dish__btn">
+          <div class="menu__dishes__dish">
+            <h4 class="menu__dishes__dish__heading">Baba au rhum revisité</h4>
+            <p class="menu__dishes__dish__desc">Avec son coulis de citron</p>
+            <p class="menu__dishes__dish__price">22€</p>
+            <button type="button" class="btn menu__dishes__dish__btn">
               <i class="fas fa-check-circle"></i>
             </button>
           </div>
-          <div class="dishes__dish">
-            <h4 class="dishes__dish__heading">Tarte au citron meringuée</h4>
-            <p class="dishes__dish__desc">Déstructurée</p>
-            <p class="dishes__dish__price">23€</p>
-            <button type="button" class="btn dishes__dish__btn">
+          <div class="menu__dishes__dish">
+            <h4 class="menu__dishes__dish__heading">
+              Tarte au citron meringuée
+            </h4>
+            <p class="menu__dishes__dish__desc">Déstructurée</p>
+            <p class="menu__dishes__dish__price">23€</p>
+            <button type="button" class="btn menu__dishes__dish__btn">
               <i class="fas fa-check-circle"></i>
             </button>
           </div>
-        </div>
-        <button type="button" class="btn btn-order menu__btn">Commander</button>
+        </section>
+        <button type="button" class="btn btn__explore-order menu__btn">
+          Commander
+        </button>
       </section>
       <footer class="footer">
         <h2 class="footer__heading">ohmyfood</h2>
         <ul class="footer__ul">
-          <li class="ul__li">
-            <a class="li__a" href="#"
+          <li class="footer__ul__li">
+            <a class="footer__ul__li__a" href="#"
               ><i class="fas fa-utensils"></i> Proposer un restaurant</a
             >
           </li>
-          <li class="ul__li">
-            <a class="li__a" href="#"
+          <li class="footer__ul__li">
+            <a class="footer__ul__li__a" href="#"
               ><i class="fas fa-hands-helping"></i> Devenir partenaire</a
             >
           </li>
-          <li class="ul__li">
-            <a class="li__a" href="#">Mentions légales</a>
+          <li class="footer__ul__li">
+            <a class="footer__ul__li__a" href="#">Mentions légales</a>
           </li>
-          <li class="ul__li">
-            <a class="li__a" href="mailto:contact.ohmyfood@caramail.fr"
+          <li class="footer__ul__li">
+            <a
+              class="footer__ul__li__a"
+              href="mailto:contact.ohmyfood@caramail.fr"
               >Contact</a
             >
           </li>
