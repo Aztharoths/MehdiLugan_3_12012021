@@ -4,6 +4,26 @@ $font$
 /*-------------------------------------*\
 $color$
 \*-------------------------------------*/
+@keyframes flow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.1;
+  }
+  90%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes flow-border {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
 html,
 body,
 #bloc_page {
@@ -375,6 +395,10 @@ img {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  animation: flow 300ms 0ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: bottom;
   background: #f6f6f6;
   position: relative;
   top: -50px;
@@ -389,6 +413,88 @@ img {
 }
 .menu__dishes {
   width: 90%;
+}
+.menu__dishes:nth-child(2) {
+  /*h3 > div {
+    @include flow-border(1250ms);
+    transform-origin: left;       
+  }*/
+  animation: flow 100ms 300ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(2) div:nth-of-type(1) {
+  animation: flow 200ms 450ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(2) div:nth-of-type(2) {
+  animation: flow 200ms 650ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(2) div:nth-of-type(3) {
+  animation: flow 200ms 850ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(2) div:nth-of-type(4) {
+  animation: flow 200ms 1050ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(3) {
+  animation: flow 100ms 1300ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(3) div:nth-of-type(1) {
+  animation: flow 200ms 1400ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(3) div:nth-of-type(2) {
+  animation: flow 200ms 1600ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(3) div:nth-of-type(3) {
+  animation: flow 200ms 1800ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(4) {
+  animation: flow 100ms 2100ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(4) div:nth-of-type(1) {
+  animation: flow 200ms 2200ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(4) div:nth-of-type(2) {
+  animation: flow 200ms 2400ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.menu__dishes:nth-child(4) div:nth-of-type(3) {
+  animation: flow 200ms 2600ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 .menu__dishes__heading {
   text-transform: uppercase;
@@ -457,6 +563,10 @@ img {
 }
 .menu__btn {
   margin-top: 50px;
+  animation: flow 200ms 3000ms;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 
 /*----------------------------------------*\

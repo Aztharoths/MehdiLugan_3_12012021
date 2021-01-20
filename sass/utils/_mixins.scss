@@ -16,3 +16,13 @@
 ) {
   box-shadow: $sizeR $sizeB $size-spread $color;
 }
+@mixin flow($delay: 0ms, $duration: 300ms) {
+  animation: flow $duration $delay;
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+}
+@mixin flow-border($delay: 0ms) {
+  animation: flow-border 200ms $delay;
+  animation-fill-mode: forwards;
+  transform: scaleX(0);
+}

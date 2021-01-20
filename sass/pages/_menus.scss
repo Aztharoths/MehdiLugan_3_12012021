@@ -5,6 +5,8 @@ img {
 }
 .menu {
   @include flex(column);
+  @include flow;
+  transform-origin: bottom;
   background: $bg;
   position: relative;
   top: -50px;
@@ -15,6 +17,62 @@ img {
   }
   &__dishes {
     width: 90%;
+    &:nth-child(2) {
+      /*h3 > div {
+        @include flow-border(1250ms);
+        transform-origin: left;       
+      }*/
+      @include flow(300ms, 100ms);
+      transform-origin: top;
+      & div:nth-of-type(1) {
+        @include flow(450ms, 200ms);
+        transform-origin: top;
+      }
+      & div:nth-of-type(2) {
+        @include flow(650ms, 200ms);
+        transform-origin: top;
+      }
+      & div:nth-of-type(3) {
+        @include flow(850ms, 200ms);
+        transform-origin: top;
+      }
+      & div:nth-of-type(4) {
+        @include flow(1050ms, 200ms);
+        transform-origin: top;
+      }
+    }
+    &:nth-child(3) {
+      @include flow(1300ms, 100ms);
+      transform-origin: top;
+      & div:nth-of-type(1) {
+        @include flow(1400ms, 200ms);
+        transform-origin: top;
+      }
+      & div:nth-of-type(2) {
+        @include flow(1600ms, 200ms);
+        transform-origin: top;
+      }
+      & div:nth-of-type(3) {
+        @include flow(1800ms, 200ms);
+        transform-origin: top;
+      }
+    }
+    &:nth-child(4) {
+      @include flow(2100ms, 100ms);
+      transform-origin: top;
+      & div:nth-of-type(1) {
+        @include flow(2200ms, 200ms);
+        transform-origin: top;
+      }
+      & div:nth-of-type(2) {
+        @include flow(2400ms, 200ms);
+        transform-origin: top;
+      }
+      & div:nth-of-type(3) {
+        @include flow(2600ms, 200ms);
+        transform-origin: top;
+      }
+    }
     &__heading {
       text-transform: uppercase;
       font-weight: 500;
@@ -85,6 +143,8 @@ img {
   }
   &__btn {
     margin-top: 50px;
+    @include flow(3000ms, 200ms);
+    transform-origin: top;
   }
 }
 /*----------------------------------------*\

@@ -1,0 +1,21 @@
+@keyframes flow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.1;
+  }
+  90%,
+  100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes flow-border {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
