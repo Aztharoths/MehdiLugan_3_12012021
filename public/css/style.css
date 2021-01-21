@@ -78,7 +78,7 @@ h1,
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(#9356dc, #ff79da);
+  background: linear-gradient(#ff66d5, #c9abee);
   z-index: -1;
   opacity: 0;
   transition: 300ms;
@@ -96,6 +96,9 @@ h1,
 .btn__explore-order::before {
   border-radius: 50px;
 }
+.btn__explore-order:hover {
+  box-shadow: 4px 4px 10px #666666;
+}
 .btn__like {
   font-size: 1rem;
   transform: scale(1.5, 1.7);
@@ -104,6 +107,7 @@ h1,
   z-index: 2;
 }
 .btn__like:hover i, .btn__like:active i, .btn__like:focus i {
+  transition: font-weight 300ms;
   font-weight: 900;
   background: linear-gradient(#ff79da, #9356dc);
   background-clip: text;

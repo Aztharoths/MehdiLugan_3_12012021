@@ -13,11 +13,22 @@
     color: $color-white;
     @include box-shadow;
     @include hover-bg(
-      linear-gradient($primary-color, $secondary-color),
+      linear-gradient(
+        change-color($secondary-color, $lightness: 70%),
+        change-color($primary-color, $lightness: 80%)
+      ),
       $color-black
     );
     &::before {
       border-radius: 50px;
+    }
+    &:hover {
+      @include box-shadow(
+        4px,
+        4px,
+        10px,
+        change-color($bg-2nd, $lightness: 40%)
+      );
     }
   }
   &__like {
@@ -30,6 +41,7 @@
     &:active,
     &:focus {
       i {
+        transition: font-weight $anim-btn-dur;
         font-weight: 900;
         background: $gradient;
         background-clip: text;
