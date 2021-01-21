@@ -12,6 +12,13 @@
     font-size: 1.1rem;
     color: $color-white;
     @include box-shadow;
+    @include hover-bg(
+      linear-gradient($primary-color, $secondary-color),
+      $color-black
+    );
+    &::before {
+      border-radius: 50px;
+    }
   }
   &__like {
     font-size: 1rem;

@@ -1,13 +1,50 @@
+//place the text in center
 @mixin text-position($marging: 0px, $text-align: center) {
   margin: $marging;
   text-align: $text-align;
 }
+//place element in center
 @mixin flex($direction: row, $wrap: nowrap, $justify: center, $align: center) {
   display: flex;
   flex-flow: $direction $wrap;
   justify-content: $justify;
   align-items: $align;
 }
+//change background color in case of :hover
+@mixin hover-bg(
+  $clr-bg: $primary-color,
+  $clr-txt: $secondary-color,
+  $transition-dur: $anim-btn-dur
+) {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $clr-bg;
+    z-index: -1;
+    opacity: 0;
+    transition: $transition-dur;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+      transition: $transition-dur;
+    }
+  }
+  &:active,
+  &:focus {
+    color: $clr-txt;
+    &::before {
+      opacity: 0;
+    }
+  }
+}
+//create a shadow for the box from background
 @mixin box-shadow(
   $sizeR: 4px,
   $sizeB: 4px,
@@ -16,7 +53,13 @@
 ) {
   box-shadow: $sizeR $sizeB $size-spread $color;
 }
+//add delay for "flow" keyframe
 @mixin flow($multiplicator: 1, $origin: top) {
   animation: flow $duration $delay * $multiplicator backwards;
+  transform-origin: $origin;
+}
+//add "flow" keyframe and change transform origin
+@mixin anim-flow($origin: top) {
+  animation: flow $anim-dishes-dur backwards;
   transform-origin: $origin;
 }
