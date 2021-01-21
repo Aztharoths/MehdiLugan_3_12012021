@@ -5,8 +5,6 @@ img {
 }
 .menu {
   @include flex(column);
-  @include flow;
-  transform-origin: bottom;
   background: $bg;
   position: relative;
   top: -50px;
@@ -17,62 +15,6 @@ img {
   }
   &__dishes {
     width: 90%;
-    &:nth-child(2) {
-      /*h3 > div {
-        @include flow-border(1250ms);
-        transform-origin: left;       
-      }*/
-      @include flow(300ms, 100ms);
-      transform-origin: top;
-      & div:nth-of-type(1) {
-        @include flow(450ms, 200ms);
-        transform-origin: top;
-      }
-      & div:nth-of-type(2) {
-        @include flow(650ms, 200ms);
-        transform-origin: top;
-      }
-      & div:nth-of-type(3) {
-        @include flow(850ms, 200ms);
-        transform-origin: top;
-      }
-      & div:nth-of-type(4) {
-        @include flow(1050ms, 200ms);
-        transform-origin: top;
-      }
-    }
-    &:nth-child(3) {
-      @include flow(1300ms, 100ms);
-      transform-origin: top;
-      & div:nth-of-type(1) {
-        @include flow(1400ms, 200ms);
-        transform-origin: top;
-      }
-      & div:nth-of-type(2) {
-        @include flow(1600ms, 200ms);
-        transform-origin: top;
-      }
-      & div:nth-of-type(3) {
-        @include flow(1800ms, 200ms);
-        transform-origin: top;
-      }
-    }
-    &:nth-child(4) {
-      @include flow(2100ms, 100ms);
-      transform-origin: top;
-      & div:nth-of-type(1) {
-        @include flow(2200ms, 200ms);
-        transform-origin: top;
-      }
-      & div:nth-of-type(2) {
-        @include flow(2400ms, 200ms);
-        transform-origin: top;
-      }
-      & div:nth-of-type(3) {
-        @include flow(2600ms, 200ms);
-        transform-origin: top;
-      }
-    }
     &__heading {
       text-transform: uppercase;
       font-weight: 500;
@@ -105,53 +47,132 @@ img {
       }
       &__btn {
         height: 100%;
-        background: $tertiary-color;
-        color: $color-white;
-        width: 0px;
-        font-size: 1.5rem;
+        width: 15%;
         align-self: flex-end;
         border-radius: 0 20px 20px 0;
-        @include box-shadow;
-        visibility: collapse;
-        transition: width 500ms;
-        i {
-          transition: transform 500ms;
-        }
-      }
-      &:hover {
-        button {
-          visibility: visible;
-          transform: rotate(1turn);
-          width: 15%;
-          i {
-            transform: rotate(1turn);
-          }
-          &:hover,
-          &:active,
-          &:focus {
-            background-color: change-color(
-              $tertiary-color,
-              $saturation: 60%,
-              $lightness: 95%
-            );
-            border: 2px solid $tertiary-color;
-            color: $tertiary-color;
-          }
-        }
+        font-size: 1.5rem;
+        color: $color-white;
+        background-color: $tertiary-color;
       }
     }
   }
   &__btn {
     margin-top: 50px;
-    @include flow(3000ms, 200ms);
-    transform-origin: top;
   }
 }
-/*----------------------------------------*\
 
-@>700<@
+/*@{ANIMATION}@*/
 
-\*----------------------------------------*/
+/*@{MENU FLOW}@*/
+
+/*.menu {
+      @include flow(1, bottom);
+      &__dishes {
+        &:nth-child(2) {
+          @include flow(2);
+          & div:nth-of-type(1) {
+            @include flow(3);
+          }
+          & div:nth-of-type(2) {
+            @include flow(4);
+          }
+          & div:nth-of-type(3) {
+            @include flow(5);
+          }
+          & div:nth-of-type(4) {
+            @include flow(6);
+          }
+        }
+        &:nth-child(3) {
+          @include flow(7);
+          & div:nth-of-type(1) {
+            @include flow(8);
+          }
+          & div:nth-of-type(2) {
+            @include flow(9);
+          }
+          & div:nth-of-type(3) {
+            @include flow(10);
+          }
+        }
+        &:nth-child(4) {
+          @include flow(11);
+          & div:nth-of-type(1) {
+            @include flow(12);
+          }
+          & div:nth-of-type(2) {
+            @include flow(13);
+          }
+          & div:nth-of-type(3) {
+            @include flow(14);
+          }
+        }
+      }
+      &__btn {
+        @include flow(15);
+      }
+    }*/
+
+/*@{DISH BUTTON ACTIVATION}@*/
+
+.menu {
+  &__dishes {
+    &__dish {
+      &__btn {
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: change-color(
+            $tertiary-color,
+            $saturation: 50%,
+            $lightness: 45%
+          );
+          border-radius: 0 20px 20px 0;
+          z-index: -1;
+          opacity: 0;
+        }
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+        }
+        &:focus,
+        &:active {
+          &::before {
+            opacity: 0;
+          }
+          color: change-color(
+            $tertiary-color,
+            $saturation: 50%,
+            $lightness: 45%
+          );
+        }
+      }
+    }
+  }
+}
+/*@{DISH BUTTON FLOW}@*/
+.menu {
+  &__dishes {
+    &__dish {
+      &:hover {
+        & > .menu__dishes__dish__btn {
+        }
+      }
+      &__btn {
+      }
+    }
+  }
+}
+
+/*@>700<@*/
+
 @media (min-width: 700px) {
   .menu {
     display: grid;
@@ -189,11 +210,9 @@ img {
     }
   }
 }
-/*----------------------------------------*\
 
-@>1400<@
+/*@>1400<@*/
 
-\*----------------------------------------*/
 @media (min-width: 1400px) {
   .menu {
     @include flex(row, wrap);

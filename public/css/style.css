@@ -4,24 +4,15 @@ $font$
 /*-------------------------------------*\
 $color$
 \*-------------------------------------*/
+/*-------------------------------------*\
+$KEYFRAMES$
+\*-------------------------------------*/
 @keyframes flow {
   0% {
     transform: scaleY(0);
-    opacity: 0.1;
-  }
-  90%, 100% {
-    opacity: 1;
   }
   100% {
     transform: scaleY(1);
-  }
-}
-@keyframes flow-border {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
   }
 }
 html,
@@ -395,10 +386,6 @@ img {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  animation: flow 300ms 0ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: bottom;
   background: #f6f6f6;
   position: relative;
   top: -50px;
@@ -413,88 +400,6 @@ img {
 }
 .menu__dishes {
   width: 90%;
-}
-.menu__dishes:nth-child(2) {
-  /*h3 > div {
-    @include flow-border(1250ms);
-    transform-origin: left;       
-  }*/
-  animation: flow 100ms 300ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(2) div:nth-of-type(1) {
-  animation: flow 200ms 450ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(2) div:nth-of-type(2) {
-  animation: flow 200ms 650ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(2) div:nth-of-type(3) {
-  animation: flow 200ms 850ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(2) div:nth-of-type(4) {
-  animation: flow 200ms 1050ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(3) {
-  animation: flow 100ms 1300ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(3) div:nth-of-type(1) {
-  animation: flow 200ms 1400ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(3) div:nth-of-type(2) {
-  animation: flow 200ms 1600ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(3) div:nth-of-type(3) {
-  animation: flow 200ms 1800ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(4) {
-  animation: flow 100ms 2100ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(4) div:nth-of-type(1) {
-  animation: flow 200ms 2200ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(4) div:nth-of-type(2) {
-  animation: flow 200ms 2400ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
-}
-.menu__dishes:nth-child(4) div:nth-of-type(3) {
-  animation: flow 200ms 2600ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
 }
 .menu__dishes__heading {
   text-transform: uppercase;
@@ -535,45 +440,95 @@ img {
 }
 .menu__dishes__dish__btn {
   height: 100%;
-  background: #99e2d0;
-  color: #fff;
-  width: 0px;
-  font-size: 1.5rem;
+  width: 15%;
   align-self: flex-end;
   border-radius: 0 20px 20px 0;
-  box-shadow: 4px 4px 10px #d1d1d1;
-  visibility: collapse;
-  transition: width 500ms;
-}
-.menu__dishes__dish__btn i {
-  transition: transform 500ms;
-}
-.menu__dishes__dish:hover button {
-  visibility: visible;
-  transform: rotate(1turn);
-  width: 15%;
-}
-.menu__dishes__dish:hover button i {
-  transform: rotate(1turn);
-}
-.menu__dishes__dish:hover button:hover, .menu__dishes__dish:hover button:active, .menu__dishes__dish:hover button:focus {
-  background-color: #ebfaf6;
-  border: 2px solid #99e2d0;
-  color: #99e2d0;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #99e2d0;
 }
 .menu__btn {
   margin-top: 50px;
-  animation: flow 200ms 3000ms;
-  animation-fill-mode: forwards;
-  transform: scaleY(0);
-  transform-origin: top;
 }
 
-/*----------------------------------------*\
+/*@{ANIMATION}@*/
+/*@{MENU FLOW}@*/
+/*.menu {
+      @include flow(1, bottom);
+      &__dishes {
+        &:nth-child(2) {
+          @include flow(2);
+          & div:nth-of-type(1) {
+            @include flow(3);
+          }
+          & div:nth-of-type(2) {
+            @include flow(4);
+          }
+          & div:nth-of-type(3) {
+            @include flow(5);
+          }
+          & div:nth-of-type(4) {
+            @include flow(6);
+          }
+        }
+        &:nth-child(3) {
+          @include flow(7);
+          & div:nth-of-type(1) {
+            @include flow(8);
+          }
+          & div:nth-of-type(2) {
+            @include flow(9);
+          }
+          & div:nth-of-type(3) {
+            @include flow(10);
+          }
+        }
+        &:nth-child(4) {
+          @include flow(11);
+          & div:nth-of-type(1) {
+            @include flow(12);
+          }
+          & div:nth-of-type(2) {
+            @include flow(13);
+          }
+          & div:nth-of-type(3) {
+            @include flow(14);
+          }
+        }
+      }
+      &__btn {
+        @include flow(15);
+      }
+    }*/
+/*@{DISH BUTTON ACTIVATION}@*/
+.menu__dishes__dish__btn {
+  position: relative;
+  z-index: 1;
+}
+.menu__dishes__dish__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #39ac90;
+  border-radius: 0 20px 20px 0;
+  z-index: -1;
+  opacity: 0;
+}
+.menu__dishes__dish__btn:hover::before {
+  opacity: 1;
+}
+.menu__dishes__dish__btn:focus, .menu__dishes__dish__btn:active {
+  color: #39ac90;
+}
+.menu__dishes__dish__btn:focus::before, .menu__dishes__dish__btn:active::before {
+  opacity: 0;
+}
 
-@>700<@
-
-\*----------------------------------------*/
+/*@{DISH BUTTON FLOW}@*/
+/*@>700<@*/
 @media (min-width: 700px) {
   .menu {
     display: grid;
@@ -611,11 +566,7 @@ img {
     justify-self: center;
   }
 }
-/*----------------------------------------*\
-
-@>1400<@
-
-\*----------------------------------------*/
+/*@>1400<@*/
 @media (min-width: 1400px) {
   .menu {
     display: flex;
