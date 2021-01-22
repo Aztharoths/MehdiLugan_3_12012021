@@ -18,7 +18,12 @@ img {
     &__heading {
       text-transform: uppercase;
       font-weight: 500;
-      &__border {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
         background-color: $tertiary-color;
         margin: 5px 0 0 0;
         height: 3px;
@@ -126,7 +131,6 @@ img {
     @include flow(15);
   }
 }*/
-
 .menu {
   @include anim-flow(bottom);
   &__dishes {
@@ -157,6 +161,7 @@ img {
     }
   }
 }
+
 /*@{DISH BUTTON FLOW}@*/
 .menu {
   &__dishes {
@@ -178,6 +183,18 @@ img {
   }
 }
 
+/*@{DISH BORDER FLOW}@*/
+.menu {
+  &__dishes {
+    &__heading {
+      &::after {
+        animation: border 1s $anim-dishes-delay * 5
+          cubic-bezier(1, 0.5, 0.78, 1) both;
+        transform-origin: left;
+      }
+    }
+  }
+}
 /*@>700<@*/
 
 @media (min-width: 700px) {

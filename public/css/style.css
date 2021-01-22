@@ -46,6 +46,17 @@ $KEYFRAMES$
     opacity: 0;
   }
 }
+@keyframes border {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(6, 0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 html,
 body,
 #bloc_page {
@@ -573,8 +584,13 @@ img {
 .menu__dishes__heading {
   text-transform: uppercase;
   font-weight: 500;
+  position: relative;
 }
-.menu__dishes__heading__border {
+.menu__dishes__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
   background-color: #99e2d0;
   margin: 5px 0 0 0;
   height: 3px;
@@ -739,6 +755,12 @@ img {
 .menu__dishes__dish__btn {
   transform: scaleX(0);
   transform-origin: right;
+}
+
+/*@{DISH BORDER FLOW}@*/
+.menu__dishes__heading::after {
+  animation: border 1s 2500ms cubic-bezier(1, 0.5, 0.78, 1) both;
+  transform-origin: left;
 }
 
 /*@>700<@*/
