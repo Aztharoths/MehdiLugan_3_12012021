@@ -63,3 +63,13 @@
   animation: flow $anim-dishes-dur backwards;
   transform-origin: $origin;
 }
+@mixin spin($x: center, $y: center) {
+  animation: spin 2s linear 2;
+  transform-origin: $x $y;
+}
+@mixin loading-ball {
+  background: $tertiary-color;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+}

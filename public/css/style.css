@@ -10,11 +10,9 @@ $KEYFRAMES$
 @keyframes flow {
   from {
     transform: scaleY(0);
-    opacity: 0;
   }
   to {
     transform: scaleY(1);
-    opacity: 1;
   }
 }
 @keyframes btn-flow {
@@ -23,6 +21,28 @@ $KEYFRAMES$
   }
   to {
     transform: scaleX(1);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes disappear {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
   }
 }
 html,
@@ -88,7 +108,7 @@ h1,
   transition: 300ms;
 }
 .btn__explore-order:active, .btn__explore-order:focus {
-  color: #000;
+  color: #fff;
 }
 .btn__explore-order:active::before, .btn__explore-order:focus::before {
   opacity: 0;
@@ -107,7 +127,6 @@ h1,
   z-index: 2;
 }
 .btn__like:hover i, .btn__like:active i, .btn__like:focus i {
-  transition: font-weight 300ms;
   font-weight: 900;
   background: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
@@ -184,6 +203,95 @@ h1,
     align-items: center;
   }
 }
+/*----------------------------------------*\
+
+<LOADER>
+
+\*----------------------------------------*/
+.loader {
+  position: absolute;
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Shrikhand";
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  animation: disappear 1s 3s linear forwards;
+}
+.loader__loading {
+  position: relative;
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.loader__loading::before {
+  content: "";
+  position: absolute;
+  background: #99e2d0;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  top: -35px;
+  bottom: 0px;
+  animation: spin 2s linear 2;
+  transform-origin: center 110px;
+}
+.loader__loading::after {
+  content: "";
+  position: absolute;
+  background: #99e2d0;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  bottom: -35px;
+  animation: spin 2s linear 2;
+  transform-origin: center -80px;
+}
+.loader__loading span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.loader__loading span::before {
+  content: "";
+  position: absolute;
+  background: #99e2d0;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  left: -35px;
+  bottom: 60px;
+  animation: spin 2s linear 2;
+  transform-origin: 110px center;
+}
+.loader__loading span::after {
+  content: "";
+  position: absolute;
+  background: #99e2d0;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  right: -35px;
+  bottom: 60px;
+  animation: spin 2s linear 2;
+  transform-origin: -80px center;
+}
+
 /*----------------------------------------*\
 
 <SEARCH-CITY>

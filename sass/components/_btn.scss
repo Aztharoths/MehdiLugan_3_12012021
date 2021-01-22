@@ -17,7 +17,7 @@
         change-color($secondary-color, $lightness: 70%),
         change-color($primary-color, $lightness: 80%)
       ),
-      $color-black
+      $color-white
     );
     &::before {
       border-radius: 50px;
@@ -41,7 +41,6 @@
     &:active,
     &:focus {
       i {
-        transition: font-weight $anim-btn-dur;
         font-weight: 900;
         background: $gradient;
         background-clip: text;
