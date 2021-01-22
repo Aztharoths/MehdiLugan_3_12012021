@@ -37,15 +37,27 @@
     color: $color-subtitle;
     background: none;
     z-index: 2;
+    position: relative;
+    i::after {
+      content: "\f004";
+      font-size: 1rem;
+      font-weight: 900;
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      z-index: 5;
+      background: $gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform: scale(0);
+    }
     &:hover,
     &:active,
     &:focus {
-      i {
-        font-weight: 900;
-        background: $gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      i::after {
+        transform: scale(1.1);
+        transition: transform 1s;
       }
     }
   }
