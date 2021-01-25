@@ -36,37 +36,31 @@ img {
       @include box-shadow;
       border-radius: 20px;
       height: 70px;
-      display: grid;
-      grid-template-rows: repeat(2, 35px);
-      grid-template-columns: 3fr 1fr 1fr;
+      @include flex(column, wrap, space-evenly, flex-start);
+      flex: none;
       overflow: hidden;
+
+      &__desc,
       &__heading {
-        grid-area: 1 / 1 / 2 / 3;
         margin: 0;
-        align-self: center;
-        padding-left: 10px;
+        padding-left: 20px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-      }
-      &__desc {
-        grid-area: 2 / 1 / 3 / 2;
-        margin: 0;
-        align-self: center;
-        padding-left: 10px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        width: calc(85% - 20px);
+        height: 40%;
       }
       &__price {
-        grid-area: 2 / 2 / 3 / 3;
+        @include flex(row, nowrap, flex-end, flex-end);
         margin: 0;
-        align-self: center;
-        justify-self: end;
-        padding-right: 10px;
+        height: 60%;
+        padding-right: 20px;
+        width: calc(15% - 20px);
       }
       &__btn {
-        grid-area: 1 / 3 / 3 / 4;
+        height: 100%;
+        width: 15%;
+        @include box-shadow;
         border-radius: 0 20px 20px 0;
         background-color: $tertiary-color;
         font-size: 1.5rem;
@@ -80,124 +74,9 @@ img {
   }
 }
 
-/*@{ANIMATION}@*/
+/*@>760<@*/
 
-/*@{MENU FLOW}@*/
-
-/*.menu {
-  @include flow(1, bottom);
-  &__dishes {
-    &:nth-child(2) {
-      @include flow(2);
-      & div:nth-of-type(1) {
-        @include flow(3);
-      }
-      & div:nth-of-type(2) {
-        @include flow(4);
-      }
-      & div:nth-of-type(3) {
-        @include flow(5);
-      }
-      & div:nth-of-type(4) {
-        @include flow(6);
-      }
-    }
-    &:nth-child(3) {
-      @include flow(7);
-      & div:nth-of-type(1) {
-        @include flow(8);
-      }
-      & div:nth-of-type(2) {
-        @include flow(9);
-      }
-      & div:nth-of-type(3) {
-        @include flow(10);
-      }
-    }
-    &:nth-child(4) {
-      @include flow(11);
-      & div:nth-of-type(1) {
-        @include flow(12);
-      }
-      & div:nth-of-type(2) {
-        @include flow(13);
-      }
-      & div:nth-of-type(3) {
-        @include flow(14);
-      }
-    }
-  }
-  &__btn {
-    @include flow(15);
-  }
-}*/
-.menu {
-  @include anim-flow(bottom);
-  &__dishes {
-    @include anim-flow;
-    @for $i from 1 through 3 {
-      &--#{$i} {
-        animation-delay: $anim-dishes-delay * $i;
-      }
-    }
-  }
-  &__btn {
-    @include anim-flow;
-    animation-delay: $anim-dishes-delay * 4;
-  }
-}
-
-/*@{DISH BUTTON ACTIVATION}@*/
-
-.menu {
-  &__dishes {
-    &__dish {
-      &__btn {
-        @include hover-bg(
-          change-color($tertiary-color, $saturation: 50%, $lightness: 45%),
-          change-color($tertiary-color, $saturation: 50%, $lightness: 45%)
-        );
-      }
-    }
-  }
-}
-
-/*@{DISH BUTTON FLOW}@*/
-.menu {
-  &__dishes {
-    &__dish {
-      &:hover {
-        & > button {
-          animation: btn-flow $anim-btn-dur forwards;
-          & > i {
-            transform: rotate(1turn);
-            transition: transform $anim-btn-dur 100ms;
-          }
-        }
-      }
-      &__btn {
-        transform: scaleX(0);
-        transform-origin: right;
-      }
-    }
-  }
-}
-
-/*@{DISH BORDER FLOW}@*/
-.menu {
-  &__dishes {
-    &__heading {
-      &::after {
-        animation: border 1s $anim-dishes-delay * 5
-          cubic-bezier(1, 0.5, 0.78, 1) both;
-        transform-origin: left;
-      }
-    }
-  }
-}
-/*@>700<@*/
-
-@media (min-width: 700px) {
+@media (min-width: 760px) {
   .menu {
     display: grid;
     grid-template-rows: 75px 1fr 1fr 75px;

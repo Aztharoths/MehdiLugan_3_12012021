@@ -1,0 +1,95 @@
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes disappear {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@mixin spin($x: center, $y: center) {
+  animation: spin 2s linear 2;
+  transform-origin: $x $y;
+}
+@mixin loading-ball {
+  background: $tertiary-color;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+}
+.loader {
+  position: absolute;
+  background-color: $color-black;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  color: $color-white;
+  font-size: 2rem;
+  font-family: $font-family-heading;
+  @include flex;
+  animation: disappear 1s 3s linear forwards;
+  &__loading {
+    position: relative;
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    @include flex;
+    &::before {
+      content: "";
+      position: absolute;
+      @include loading-ball;
+      top: -35px;
+      bottom: 0px;
+      @include spin(center, 110px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      @include loading-ball;
+      bottom: -35px;
+      @include spin(center, -80px);
+    }
+    span {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        @include loading-ball;
+        left: -35px;
+        bottom: 60px;
+        @include spin(110px);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        @include loading-ball;
+        right: -35px;
+        bottom: 60px;
+        @include spin(-80px);
+      }
+    }
+  }
+}
