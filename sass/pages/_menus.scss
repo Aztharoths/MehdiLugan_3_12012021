@@ -40,8 +40,8 @@ img {
       flex: none;
       overflow: hidden;
 
-      &__desc,
-      &__heading {
+      &__heading,
+      &__desc {
         margin: 0;
         padding-left: 20px;
         white-space: nowrap;
@@ -49,6 +49,9 @@ img {
         text-overflow: ellipsis;
         width: calc(85% - 20px);
         height: 40%;
+      }
+      &__heading {
+        margin-top: 10px;
       }
       &__price {
         @include flex(row, nowrap, flex-end, flex-end);
