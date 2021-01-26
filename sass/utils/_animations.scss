@@ -19,6 +19,14 @@
     transform: scale(1);
   }
 }
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 /*@{BUTTON}@*/
 .btn {
   &__explore-order {
@@ -123,20 +131,27 @@
 .menu {
   &__dishes {
     &__dish {
+      & > .menu__dishes__dish__heading,
+      & > .menu__dishes__dish__desc {
+        transition: width 500ms;
+      }
+      & > .menu__dishes__dish__price {
+        transition: width 500ms;
+      }
+
       &:hover {
         & > .menu__dishes__dish__heading,
         & > .menu__dishes__dish__desc {
-          width: calc(65% - 20px);
+          width: calc(60% - 20px);
           transition: width 500ms;
         }
         & > .menu__dishes__dish__price {
-          width: calc(20% - 20px);
+          width: calc(15% - 20px);
           transition: width 500ms;
         }
         & > .menu__dishes__dish__btn {
           & > i {
-            transform: rotate(1turn);
-            transition: transform $anim-btn-dur 150ms;
+            animation: spin $anim-btn-dur 150ms;
           }
         }
       }

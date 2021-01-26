@@ -27,6 +27,14 @@ $KEYFRAMES$
     transform: scale(1);
   }
 }
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 /*@{BUTTON}@*/
 .btn__explore-order {
   position: relative;
@@ -145,17 +153,22 @@ $KEYFRAMES$
 }
 
 /*@{DISH BUTTON FLOW}@*/
+.menu__dishes__dish > .menu__dishes__dish__heading, .menu__dishes__dish > .menu__dishes__dish__desc {
+  transition: width 500ms;
+}
+.menu__dishes__dish > .menu__dishes__dish__price {
+  transition: width 500ms;
+}
 .menu__dishes__dish:hover > .menu__dishes__dish__heading, .menu__dishes__dish:hover > .menu__dishes__dish__desc {
-  width: calc(65% - 20px);
+  width: calc(60% - 20px);
   transition: width 500ms;
 }
 .menu__dishes__dish:hover > .menu__dishes__dish__price {
-  width: calc(20% - 20px);
+  width: calc(15% - 20px);
   transition: width 500ms;
 }
 .menu__dishes__dish:hover > .menu__dishes__dish__btn > i {
-  transform: rotate(1turn);
-  transition: transform 300ms 150ms;
+  animation: spin 300ms 150ms;
 }
 
 /*@{DISH BORDER FLOW}@*/
@@ -215,14 +228,6 @@ h1,
   background: none;
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
 @keyframes disappear {
   0% {
     transform: scaleY(1);
@@ -707,7 +712,7 @@ img {
 }
 .menu__dishes__dish__btn {
   height: 100%;
-  width: 15%;
+  width: 25%;
   box-shadow: 4px 4px 10px #d1d1d1;
   border-radius: 0 20px 20px 0;
   background-color: #99e2d0;
