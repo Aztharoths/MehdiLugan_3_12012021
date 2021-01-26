@@ -18,7 +18,12 @@ img {
     &__heading {
       text-transform: uppercase;
       font-weight: 500;
-      &__border {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
         background-color: $tertiary-color;
         margin: 5px 0 0 0;
         height: 3px;
@@ -26,60 +31,44 @@ img {
       }
     }
     &__dish {
-      @include flex(column, wrap, flex-start, flex-start);
       width: 100%;
-      background: $color-white;
       margin: 10px 0;
       @include box-shadow;
       border-radius: 20px;
       height: 70px;
-      &__heading {
-        margin: 15px 0 0 15px;
-        width: 65%;
-      }
+      @include flex(column, wrap, space-evenly, flex-start);
+      flex: none;
+      overflow: hidden;
+
+      &__heading,
       &__desc {
-        margin: 5px 0 0 15px;
+        margin: 0;
+        padding-left: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: calc(85% - 20px);
+        height: 40%;
+      }
+      &__heading {
+        margin-top: 10px;
       }
       &__price {
-        align-self: flex-end;
-        height: 100%;
-        @include flex(column, nowrap, flex-end);
+        @include flex(row, nowrap, flex-end, flex-end);
+        margin: 0;
+        height: 60%;
+        padding-right: 20px;
+        width: calc(15% - 20px);
       }
       &__btn {
         height: 100%;
-        background: $tertiary-color;
-        color: $color-white;
-        width: 0px;
-        font-size: 1.5rem;
-        align-self: flex-end;
-        border-radius: 0 20px 20px 0;
+        width: 15%;
         @include box-shadow;
-        visibility: collapse;
-        transition: width 500ms;
-        i {
-          transition: transform 500ms;
-        }
-      }
-      &:hover {
-        button {
-          visibility: visible;
-          transform: rotate(1turn);
-          width: 15%;
-          i {
-            transform: rotate(1turn);
-          }
-          &:hover,
-          &:active,
-          &:focus {
-            background-color: change-color(
-              $tertiary-color,
-              $saturation: 60%,
-              $lightness: 95%
-            );
-            border: 2px solid $tertiary-color;
-            color: $tertiary-color;
-          }
-        }
+        border-radius: 0 20px 20px 0;
+        background-color: $tertiary-color;
+        font-size: 1.5rem;
+        color: $color-white;
+        transform: scaleX(1);
       }
     }
   }
@@ -87,12 +76,10 @@ img {
     margin-top: 50px;
   }
 }
-/*----------------------------------------*\
 
-@>700<@
+/*@>760<@*/
 
-\*----------------------------------------*/
-@media (min-width: 700px) {
+@media (min-width: 760px) {
   .menu {
     display: grid;
     grid-template-rows: 75px 1fr 1fr 75px;
@@ -102,7 +89,7 @@ img {
       grid-column: 1 / span 2;
       justify-self: center;
       justify-content: center;
-      i {
+      button {
         margin-left: 50px;
       }
     }
@@ -129,18 +116,15 @@ img {
     }
   }
 }
-/*----------------------------------------*\
 
-@>1400<@
+/*@>1400<@*/
 
-\*----------------------------------------*/
 @media (min-width: 1400px) {
   .menu {
     @include flex(row, wrap);
     &__heading {
       margin-bottom: 30px;
       padding-bottom: 20px;
-      border-bottom: dashed 2px $tertiary-color;
     }
     &__dishes {
       width: 30%;

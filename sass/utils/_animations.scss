@@ -1,0 +1,158 @@
+@keyframes flow {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes border {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(6, 0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*@{BUTTON}@*/
+.btn {
+  &__explore-order {
+    @include hover-bg(
+      linear-gradient(
+        change-color($secondary-color, $lightness: 70%),
+        change-color($primary-color, $lightness: 80%)
+      ),
+      $color-white
+    );
+    &::before {
+      border-radius: 50px;
+    }
+    &:hover {
+      @include box-shadow(
+        4px,
+        4px,
+        10px,
+        change-color($bg-2nd, $lightness: 40%)
+      );
+    }
+  }
+  &__like {
+    font-size: 1rem;
+    transform: scale(1.5, 1.7);
+    color: $color-subtitle;
+    background: none;
+    position: relative;
+    i::after {
+      content: "\f004";
+      font-size: 1rem;
+      font-weight: 900;
+      position: absolute;
+      left: 6px;
+      z-index: 5;
+      background: $gradient;
+      -webkit-background-clip: text;
+      color: transparent;
+      transform: scale(0);
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      i::after {
+        transform: scale(1.3);
+        transition: transform 1s;
+      }
+    }
+  }
+}
+/*@{MANUAL}@*/
+
+.manual {
+  &__step {
+    &:hover {
+      background-color: change-color(
+        $primary-color,
+        $saturation: 60%,
+        $lightness: 95%
+      );
+      i {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/*@{MENU FLOW}@*/
+
+.menu {
+  @include anim-flow(bottom);
+  &__dishes {
+    @include anim-flow;
+    @for $i from 1 through 3 {
+      &--#{$i} {
+        animation-delay: $anim-dishes-delay * $i;
+      }
+    }
+  }
+  &__btn {
+    @include anim-flow;
+    animation-delay: $anim-dishes-delay * 4;
+  }
+}
+
+/*@{DISH BUTTON ACTIVATION}@*/
+
+.menu {
+  &__dishes {
+    &__dish {
+      &__btn {
+        @include hover-bg(
+          change-color($tertiary-color, $saturation: 50%, $lightness: 45%),
+          change-color($tertiary-color, $saturation: 50%, $lightness: 45%)
+        );
+      }
+    }
+  }
+}
+
+/*@{DISH BUTTON FLOW}@*/
+.menu {
+  &__dishes {
+    &__dish {
+      &:hover {
+        & > .menu__dishes__dish__heading,
+        & > .menu__dishes__dish__desc {
+          width: calc(65% - 20px);
+          transition: width 500ms;
+        }
+        & > .menu__dishes__dish__price {
+          width: calc(20% - 20px);
+          transition: width 500ms;
+        }
+        & > .menu__dishes__dish__btn {
+          & > i {
+            transform: rotate(1turn);
+            transition: transform $anim-btn-dur 150ms;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*@{DISH BORDER FLOW}@*/
+.menu {
+  &__dishes {
+    &__heading {
+      &::after {
+        animation: border 1s $anim-dishes-delay * 5
+          cubic-bezier(1, 0.5, 0.78, 1) both;
+        transform-origin: left;
+      }
+    }
+  }
+}

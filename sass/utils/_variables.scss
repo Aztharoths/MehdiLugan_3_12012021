@@ -20,5 +20,16 @@ $bg-2nd: #eaeaea;
 $color-subtitle: #7e7e7e;
 $color-bg-footer: #353535;
 $gradient: linear-gradient($secondary-color, $primary-color);
+$gradient-reverse: linear-gradient($primary-color, $secondary-color);
 
 $padding-page: 20px;
+
+/*-------------------------------------*\
+$KEYFRAMES$
+\*-------------------------------------*/
+$anim-dishes-dur: 500ms;
+$anim-dishes-delay: $anim-dishes-dur;
+$anim-btn-dur: 300ms;
+
+$duration: 200ms;
+$delay: $duration;

@@ -18,17 +18,5 @@
     transform: scale(1.5, 1.7);
     color: $color-subtitle;
     background: none;
-    z-index: 2;
-    &:hover,
-    &:active,
-    &:focus {
-      i {
-        font-weight: 900;
-        background: $gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
   }
 }

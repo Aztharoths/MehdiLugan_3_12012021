@@ -25,7 +25,7 @@
     border: none;
     width: 115px;
     background-color: $bg-2nd;
-    font-weight: 550;
+    font-weight: 500;
     font-size: 1.1rem;
     outline-style: none;
   }
@@ -83,16 +83,6 @@
       font-weight: bold;
       padding-left: 10px;
     }
-    &:hover {
-      background-color: change-color(
-        $primary-color,
-        $saturation: 60%,
-        $lightness: 95%
-      );
-      i {
-        color: $primary-color;
-      }
-    }
   }
 }
 /*----------------------------------------*\
@@ -108,7 +98,7 @@
     align-self: flex-start;
     padding-left: $padding-page;
   }
-  &__link {
+  &__restaurant {
     @include flex(column);
     width: 90%;
     height: 250px;
@@ -116,50 +106,61 @@
     border-radius: 20px;
     @include box-shadow;
     margin-bottom: 20px;
+    position: relative;
 
-    &__fig {
+    &__link {
       @include flex(column);
       position: relative;
       margin: 0px;
       width: 100%;
       height: 100%;
-      &__new {
-        position: absolute;
-        right: 12px;
-        top: 7px;
-        width: 80px;
-        height: 30px;
-        background-color: $tertiary-color;
-        color: change-color($tertiary-color, $saturation: 50%, $lightness: 45%);
-        @include flex;
-        border-radius: 2px;
-      }
-      &__img {
+      &__fig {
         width: 100%;
-        height: 70%;
-        border-radius: 20px 20px 0 0;
-        object-fit: cover;
+        height: 100%;
+        &__new {
+          position: absolute;
+          right: 12px;
+          top: 7px;
+          width: 80px;
+          height: 30px;
+          background-color: $tertiary-color;
+          color: change-color(
+            $tertiary-color,
+            $saturation: 50%,
+            $lightness: 45%
+          );
+          @include flex;
+          border-radius: 2px;
+        }
+        &__img {
+          width: 100%;
+          height: 70%;
+          border-radius: 20px 20px 0 0;
+          object-fit: cover;
+        }
+        &__text {
+          @include flex(column, wrap, flex-start, flex-start);
+          background-color: $color-white;
+          border-radius: 0 0 20px 20px;
+          width: 100%;
+          height: 30%;
+          h3 {
+            margin: 15px 0 5px 10px;
+            font-weight: bold;
+          }
+          p {
+            margin: 0px 0px 15px 10px;
+            color: $color-subtitle;
+          }
+        }
       }
-      &__figcaption {
-        @include flex(column, wrap, flex-start, flex-start);
-        background-color: $color-white;
-        border-radius: 0 0 20px 20px;
-        width: 100%;
-        height: 30%;
-        &__heading {
-          margin: 15px 0 5px 10px;
-          font-weight: bold;
-        }
-        p {
-          margin: 0px 0px 15px 10px;
-          color: $color-subtitle;
-        }
-        &__btn {
-          align-self: flex-end;
-          margin-right: 15px;
-          margin-top: 25px;
-        }
-      }
+    }
+    &__btn {
+      position: absolute;
+      bottom: 30px;
+      right: 15px;
+      margin-right: 15px;
+      margin-top: 25px;
     }
   }
 }
@@ -179,7 +180,7 @@
     &__heading {
       width: 100%;
     }
-    &__link {
+    &__restaurant {
       width: 40%;
       margin: 10px;
     }
@@ -197,7 +198,7 @@
 
   \*----------------------------------------*/
   .restaurants {
-    &__link {
+    &__restaurant {
       width: 20%;
     }
   }
