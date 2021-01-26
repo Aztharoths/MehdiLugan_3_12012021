@@ -255,9 +255,8 @@ h1,
 .loader__loading {
   position: relative;
   background: linear-gradient(#ff79da, #9356dc);
-  background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   height: 150px;
   width: 150px;
   border-radius: 150px;
